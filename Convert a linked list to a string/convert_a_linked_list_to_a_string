@@ -1,0 +1,18 @@
+"""Functon Node"""
+class Node():
+    """A node in a singly linked list."""
+    def __init__(self, data, next=None):
+        self.data = data
+        self.next = next
+
+def stringify(node):
+    """Converts a linked list to a string formatted as '1 -> 2 -> None'."""
+    final = []
+    current = node
+
+    while current is not None:
+        final += [str(current.data)]
+        current = current.next
+
+    final += ["None"]
+    return " -> ".join(final)
